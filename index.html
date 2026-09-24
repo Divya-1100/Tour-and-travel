@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6J132GLH00"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6J132GLH00');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JourneyGo | Tour & Travels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">✈️ Journey<span>Go</span></div>
+
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Destinations</a>
+        <a href="cart.html">Cart 🛒 <b id="cartCount">0</b></a>
+    </nav>
+
+    <a href="products.html" class="nav-btn">Explore Trips</a>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <p class="small-title">YOUR JOURNEY STARTS HERE</p>
+        <h1>Explore the World.<br><span>Make Memories.</span></h1>
+        <p class="hero-text">
+            Discover amazing destinations, exciting tour packages
+            and unforgettable travel experiences.
+        </p>
+
+        <div class="search-box">
+            <div>
+                <label>Where do you want to go?</label>
+                <input type="text" id="homeSearch" placeholder="Search destination...">
+            </div>
+            <button onclick="searchDestination()">Search 🔍</button>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-heading">
+        <div>
+            <p class="section-label">DISCOVER</p>
+            <h2>Popular Destinations</h2>
+        </div>
+        <a href="products.html" class="view-link">View All →</a>
+    </div>
+
+    <div class="destination-grid">
+
+        <div class="destination-card">
+            <div class="destination-img goa-img">
+                <span>🏖️</span>
+                <div class="destination-overlay">
+                    <h3>Goa</h3>
+                    <p>Beaches & Adventures</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <div class="destination-img kerala-img">
+                <span>🌴</span>
+                <div class="destination-overlay">
+                    <h3>Kerala</h3>
+                    <p>God's Own Country</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <div class="destination-img manali-img">
+                <span>🏔️</span>
+                <div class="destination-overlay">
+                    <h3>Manali</h3>
+                    <p>Mountains & Snow</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <div class="destination-img dubai-img">
+                <span>🌆</span>
+                <div class="destination-overlay">
+                    <h3>Dubai</h3>
+                    <p>Luxury & Adventure</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="offer-section">
+    <div class="offer-content">
+        <p class="section-label">SPECIAL OFFER</p>
+        <h2>Travel More, Spend Less!</h2>
+        <p>
+            Get up to <strong>25% OFF</strong> on selected holiday packages.
+            Plan your dream vacation today.
+        </p>
+        <a href="products.html" class="primary-btn">Explore Offers</a>
+    </div>
+
+    <div class="offer-icon">✈️</div>
+</section>
+
+<section class="section">
+    <div class="section-heading">
+        <div>
+            <p class="section-label">TOP PICKS</p>
+            <h2>Popular Tour Packages</h2>
+        </div>
+        <a href="products.html" class="view-link">View All →</a>
+    </div>
+
+    <div class="package-grid">
+
+        <div class="package-card">
+            <div class="package-image package-goa">
+                <span>Goa</span>
+            </div>
+            <div class="package-body">
+                <div class="rating">★★★★★ <span>4.8</span></div>
+                <h3>Goa Beach Escape</h3>
+                <p>4 Days / 3 Nights</p>
+                <div class="package-bottom">
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹12,999</strong>
+                    </div>
+                    <button onclick="addToCart(1)">Add +</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-image package-kerala">
+                <span>Kerala</span>
+            </div>
+            <div class="package-body">
+                <div class="rating">★★★★★ <span>4.9</span></div>
+                <h3>Kerala Backwaters</h3>
+                <p>5 Days / 4 Nights</p>
+                <div class="package-bottom">
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹18,499</strong>
+                    </div>
+                    <button onclick="addToCart(2)">Add +</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-image package-manali">
+                <span>Manali</span>
+            </div>
+            <div class="package-body">
+                <div class="rating">★★★★★ <span>4.7</span></div>
+                <h3>Manali Mountain Trip</h3>
+                <p>5 Days / 4 Nights</p>
+                <div class="package-bottom">
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹16,999</strong>
+                    </div>
+                    <button onclick="addToCart(3)">Add +</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="why-section">
+    <div class="section-heading center">
+        <div>
+            <p class="section-label">WHY JOURNEYGO?</p>
+            <h2>Travel With Confidence</h2>
+        </div>
+    </div>
+
+    <div class="why-grid">
+        <div class="why-card">
+            <div class="why-icon">💰</div>
+            <h3>Best Prices</h3>
+            <p>Get competitive prices and exciting travel offers.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🛡️</div>
+            <h3>Secure Booking</h3>
+            <p>Your booking information is handled securely.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🎧</div>
+            <h3>24/7 Support</h3>
+            <p>Our travel support team is always ready to help.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🌍</div>
+            <h3>Best Experiences</h3>
+            <p>Discover carefully selected travel experiences.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div>
+            <div class="logo footer-logo">✈️ Journey<span>Go</span></div>
+            <p>Your trusted partner for memorable journeys.</p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="products.html">Destinations</a>
+            <a href="cart.html">Cart</a>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>📧 support@journeygo.com</p>
+            <p>📞 +91 98765 43210</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2026 JourneyGo. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+

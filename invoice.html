@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6J132GLH00"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6J132GLH00');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice | JourneyGo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar no-print">
+    <div class="logo">✈️ Journey<span>Go</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Destinations</a>
+        <a href="cart.html">Cart 🛒</a>
+    </nav>
+</header>
+
+<section class="invoice-page">
+
+    <div class="invoice-actions no-print">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Print Invoice</button>
+    </div>
+
+    <div class="invoice" id="invoice">
+
+        <div class="invoice-header">
+            <div>
+                <div class="logo">✈️ Journey<span>Go</span></div>
+                <p>Tour & Travels</p>
+            </div>
+
+            <div class="invoice-title">
+                <h1>INVOICE</h1>
+                <p id="invoiceBookingId">Booking ID: -</p>
+                <p id="invoiceDate">Date: -</p>
+            </div>
+        </div>
+
+        <div class="success-box">
+            <span>✓</span>
+            <div>
+                <strong>Booking Confirmed!</strong>
+                <p>Thank you for choosing JourneyGo.</p>
+            </div>
+        </div>
+
+        <div class="invoice-info">
+
+            <div>
+                <h4>Traveller Details</h4>
+                <p><strong>Name:</strong> <span id="invoiceName">-</span></p>
+                <p><strong>Email:</strong> <span id="invoiceEmail">-</span></p>
+                <p><strong>Phone:</strong> <span id="invoicePhone">-</span></p>
+                <p><strong>Address:</strong> <span id="invoiceAddress">-</span></p>
+            </div>
+
+            <div>
+                <h4>Trip Details</h4>
+                <p><strong>Travel Date:</strong> <span id="invoiceTravelDate">-</span></p>
+                <p><strong>Travellers:</strong> <span id="invoiceTravellers">-</span></p>
+                <p><strong>Payment:</strong> <span id="invoicePayment">-</span></p>
+            </div>
+
+        </div>
+
+        <div class="invoice-table-wrapper">
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Tour Package</th>
+                        <th>Duration</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+
+                <tbody id="invoiceItems"></tbody>
+            </table>
+        </div>
+
+        <div class="invoice-total">
+
+            <div>
+                <p>Subtotal</p>
+                <p>GST (5%)</p>
+                <h3>Grand Total</h3>
+            </div>
+
+            <div>
+                <p id="invoiceSubtotal">₹0</p>
+                <p id="invoiceTax">₹0</p>
+                <h3 id="invoiceGrandTotal">₹0</h3>
+            </div>
+
+        </div>
+
+        <div class="invoice-footer">
+            <div>
+                <h4>Thank you for travelling with JourneyGo! ✈️</h4>
+                <p>We wish you a safe and memorable journey.</p>
+            </div>
+
+            <div>
+                <p>support@journeygo.com</p>
+                <p>+91 98765 43210</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+

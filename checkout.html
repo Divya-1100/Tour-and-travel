@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6J132GLH00"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6J132GLH00');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | JourneyGo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">✈️ Journey<span>Go</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Destinations</a>
+        <a href="cart.html">Cart 🛒 <b id="cartCount">0</b></a>
+    </nav>
+</header>
+
+<section class="page-banner small-banner">
+    <p class="section-label">SECURE CHECKOUT</p>
+    <h1>Complete Your Booking</h1>
+    <p>Enter your details and confirm your journey.</p>
+</section>
+
+<section class="checkout-section">
+
+    <div class="checkout-form">
+
+        <div class="form-card">
+            <h2>Traveller Information</h2>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="customerName" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="customerEmail" placeholder="Enter your email">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="customerPhone" placeholder="Enter phone number">
+                </div>
+
+                <div class="form-group">
+                    <label>Travel Date</label>
+                    <input type="date" id="travelDate">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Address</label>
+                <textarea id="customerAddress" placeholder="Enter your address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Number of Travellers</label>
+                <select id="travellers">
+                    <option value="1">1 Traveller</option>
+                    <option value="2" selected>2 Travellers</option>
+                    <option value="3">3 Travellers</option>
+                    <option value="4">4 Travellers</option>
+                    <option value="5">5 Travellers</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <h2>Payment Method</h2>
+
+            <div class="payment-options">
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="card" checked>
+                    <span>💳 Credit / Debit Card</span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="upi">
+                    <span>📱 UPI</span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="netbanking">
+                    <span>🏦 Net Banking</span>
+                </label>
+            </div>
+
+            <div id="cardFields">
+
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" id="cardNumber" maxlength="19"
+                           placeholder="1234 5678 9012 3456">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Expiry Date</label>
+                        <input type="text" id="expiry" placeholder="MM/YY">
+                    </div>
+
+                    <div class="form-group">
+                        <label>CVV</label>
+                        <input type="password" id="cvv" maxlength="3" placeholder="***">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Name on Card</label>
+                    <input type="text" id="cardName" placeholder="Name on card">
+                </div>
+
+            </div>
+
+            <div id="upiFields" class="hidden">
+                <div class="form-group">
+                    <label>UPI ID</label>
+                    <input type="text" id="upiId" placeholder="example@upi">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <aside class="order-summary">
+        <h2>Booking Summary</h2>
+
+        <div id="checkoutItems"></div>
+
+        <div class="summary-line">
+            <span>Subtotal</span>
+            <strong id="checkoutSubtotal">₹0</strong>
+        </div>
+
+        <div class="summary-line">
+            <span>GST (5%)</span>
+            <strong id="checkoutTax">₹0</strong>
+        </div>
+
+        <div class="summary-line total-line">
+            <span>Total</span>
+            <strong id="checkoutTotal">₹0</strong>
+        </div>
+
+        <button class="confirm-btn" onclick="placeBooking()">
+            Confirm & Pay 🔒
+        </button>
+
+        <p class="secure-text">🔒 Your payment information is secure.</p>
+    </aside>
+
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div>
+            <div class="logo footer-logo">✈️ Journey<span>Go</span></div>
+            <p>Your trusted partner for memorable journeys.</p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="products.html">Destinations</a>
+            <a href="cart.html">Cart</a>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>📧 support@journeygo.com</p>
+            <p>📞 +91 98765 43210</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2026 JourneyGo. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+

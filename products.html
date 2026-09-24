@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6J132GLH00"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6J132GLH00');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | JourneyGo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">✈️ Journey<span>Go</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Destinations</a>
+        <a href="cart.html">Cart 🛒 <b id="cartCount">0</b></a>
+    </nav>
+
+    <a href="cart.html" class="nav-btn">View Cart</a>
+</header>
+
+<section class="page-banner">
+    <p class="section-label">EXPLORE THE WORLD</p>
+    <h1>Find Your Perfect Holiday</h1>
+    <p>Choose from our handpicked destinations and tour packages.</p>
+</section>
+
+<section class="products-section">
+
+    <div class="filter-bar">
+        <div>
+            <h2>Tour Packages</h2>
+            <p>Explore our popular travel packages</p>
+        </div>
+
+        <input
+            type="text"
+            id="productSearch"
+            placeholder="🔍 Search destination..."
+            onkeyup="filterProducts()"
+        >
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+
+        <div class="product-card" data-name="goa">
+            <div class="product-image product-goa">
+                <span class="popular-tag">POPULAR</span>
+            </div>
+
+            <div class="product-content">
+                <div class="rating">★★★★★ <span>4.8</span></div>
+                <h3>Goa Beach Escape</h3>
+                <p class="location">📍 Goa, India</p>
+                <p>Enjoy beautiful beaches, nightlife and exciting water activities.</p>
+
+                <div class="tour-info">
+                    <span>📅 4 Days</span>
+                    <span>👥 2 Persons</span>
+                </div>
+
+                <div class="product-footer">
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹12,999</strong>
+                    </div>
+                    <button onclick="addToCart(1)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="kerala">
+            <div class="product-image product-kerala">
+                <span class="popular-tag">BEST SELLER</span>
+            </div>
+
+            <div class="product-content">
+                <div class="rating">★★★★★ <span>4.9</span></div>
+                <h3>Kerala Backwaters</h3>
+                <p class="location">📍 Kerala, India</p>
+                <p>Experience peaceful backwaters, lush greenery and houseboats.</p>
+
+                <div class="tour-info">
+                    <span>📅 5 Days</span>
+                    <span>👥 2 Persons</span>
+                </div>
+
+                <div class="product-footer">
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹18,499</strong>
+                    </div>
+                    <button onclick="addToCart(2)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="manali">
+            <div class="product-image product-manali">
+                <span class="popular-tag">TRENDING</span>
+            </div>
+
+            <div class="product-content">
+                <div class="rating">★★★★★ <span>4.7</span></div>
+                <h3>Manali Mountain Trip</h3>
+                <p class="location">📍 Himachal Pradesh, India</p>
+                <p>Explore snow-covered mountains, valleys and adventure activities.</p>
+
+                <div class="tour-info">
+                    <span>📅 5 Days</span>
+                    <span>👥 2 Persons</span>
+                </div>
+
+                <div class="product-footer">
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹16,999</strong>
+                    </div>
+                    <button onclick="addToCart(3)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="dubai">
+            <div class="product-image product-dubai">
+                <span class="popular-tag">LUXURY</span>
+            </div>
+
+            <div class="product-content">
+                <div class="rating">★★★★★ <span>4.8</span></div>
+                <h3>Dubai Luxury Escape</h3>
+                <p class="location">📍 Dubai, UAE</p>
+                <p>Experience luxury shopping, desert safari and iconic attractions.</p>
+
+                <div class="tour-info">
+                    <span>📅 5 Days</span>
+                    <span>👥 2 Persons</span>
+                </div>
+
+                <div class="product-footer">
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹45,999</strong>
+                    </div>
+                    <button onclick="addToCart(4)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="paris">
+            <div class="product-image product-paris">
+                <span class="popular-tag">EUROPE</span>
+            </div>
+
+            <div class="product-content">
+                <div class="rating">★★★★★ <span>4.9</span></div>
+                <h3>Paris Romantic Holiday</h3>
+                <p class="location">📍 Paris, France</p>
+                <p>Visit the Eiffel Tower, museums, cafes and beautiful city streets.</p>
+
+                <div class="tour-info">
+                    <span>📅 6 Days</span>
+                    <span>👥 2 Persons</span>
+                </div>
+
+                <div class="product-footer">
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹79,999</strong>
+                    </div>
+                    <button onclick="addToCart(5)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="singapore">
+            <div class="product-image product-singapore">
+                <span class="popular-tag">FAMILY</span>
+            </div>
+
+            <div class="product-content">
+                <div class="rating">★★★★★ <span>4.8</span></div>
+                <h3>Singapore Family Tour</h3>
+                <p class="location">📍 Singapore</p>
+                <p>Enjoy Universal Studios, Gardens by the Bay and city attractions.</p>
+
+                <div class="tour-info">
+                    <span>📅 5 Days</span>
+                    <span>👥 2 Persons</span>
+                </div>
+
+                <div class="product-footer">
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹52,999</strong>
+                    </div>
+                    <button onclick="addToCart(6)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="noResults" class="no-results">
+        No destinations found.
+    </div>
+
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div>
+            <div class="logo footer-logo">✈️ Journey<span>Go</span></div>
+            <p>Your trusted partner for memorable journeys.</p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="products.html">Destinations</a>
+            <a href="cart.html">Cart</a>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>📧 support@journeygo.com</p>
+            <p>📞 +91 98765 43210</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2026 JourneyGo. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
